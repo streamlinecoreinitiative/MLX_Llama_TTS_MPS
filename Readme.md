@@ -18,7 +18,7 @@ pip install -U pip setuptools wheel cmake ninja\
 *# Metal tensor backend*\
 pip install -U mlx\
 
-*# Requirements.txt*\
+*# Clone the repo and run Requirements.txt*\
 pip install -r requirements.txt\
 
 *# LLM utilities (quantise / chat / finetune)*\
