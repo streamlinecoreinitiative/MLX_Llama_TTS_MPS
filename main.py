@@ -5,6 +5,7 @@ from mlx_audio.tts.generate import generate_audio
 from mlx_lm import load as load_mlx, generate as generate_mlx
 import subprocess
 import platform
+import re
 
 MAX_TOKENS = 256
 
@@ -35,6 +36,8 @@ class JuliaLLM:
             prompt=full_prompt,
             max_tokens=MAX_TOKENS,
         )
+        # --- strip special chat template markers like <|eot_id|> etc. ---
+        response = re.sub(r"<\|[^>]+\|>", "", response)
         return response.strip()
 
 class JuliaMPS:

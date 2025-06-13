@@ -17,10 +17,14 @@ pip install -U pip setuptools wheel cmake ninja\
 \
 *# Metal tensor backend*\
 pip install -U mlx\
-\
+
+*# Requirements.txt*\
+pip install -r requirements.txt\
+
 *# LLM utilities (quantise / chat / finetune)*\
 pip install --no-cache-dir git+https://github.com/ml-explore/mlx-lm.git@main\
 \
+
 *# TTS wrapper (Kokoro → Metal)*\
 pip install --no-cache-dir git+https://github.com/Blaizzy/mlx-audio.git@main
 ### <a name="grab-a-ready-mlx-model-no-convert-step"></a>Grab a ready MLX model (no convert step)
